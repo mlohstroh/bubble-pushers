@@ -8,3 +8,23 @@ z2
 !i10f 100
 cModel Technology
 dC:/altera/15.1
+vdata_memory
+!s110 1460827802
+!i10b 1
+!s100 ISMX6GnRgZ<kG[0NzcUUW3
+IT@T3>5UWW@B7;5gObC1W81
+VDg1SIo80bB@j0V0VzS_@n1
+dC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers
+w1460827776
+8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v
+FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v
+L0 1
+OV;L;10.4b;61
+r1
+!s85 0
+31
+!s108 1460827802.000000
+!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v|
+!s90 -reportprogress|300|-work|bubble-pushers|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v|
+!i113 1
+o-work bubble-pushers
