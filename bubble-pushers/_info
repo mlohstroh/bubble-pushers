@@ -8,22 +8,42 @@ z2
 !i10f 100
 cModel Technology
 dC:/altera/15.1
+vcontrol
+!s110 1461271589
+!i10b 1
+!s100 cXLgj::G>OSQoUf]_ShB41
+Ingk0ID]9]T:>ahGTO^3on0
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers
+w1461271589
+8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v
+FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v
+L0 1
+Z2 OV;L;10.4b;61
+r1
+!s85 0
+31
+!s108 1461271589.000000
+!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v|
+!i113 1
+o-work work
 vdata_memory
-!s110 1460827802
+!s110 1461271029
 !i10b 1
 !s100 ISMX6GnRgZ<kG[0NzcUUW3
 IT@T3>5UWW@B7;5gObC1W81
-VDg1SIo80bB@j0V0VzS_@n1
-dC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers
+R0
+R1
 w1460827776
 8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v
 FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v
 L0 1
-OV;L;10.4b;61
+R2
 r1
 !s85 0
 31
-!s108 1460827802.000000
+!s108 1461271029.000000
 !s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v|
 !s90 -reportprogress|300|-work|bubble-pushers|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v|
 !i113 1
