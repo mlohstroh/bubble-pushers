@@ -9,50 +9,50 @@ z2
 cModel Technology
 dC:/altera/15.1
 vadder
-Z0 !s110 1461636330
+Z0 !s110 1461875308
 !i10b 1
 !s100 EHn<7?DYk6i9lX;zU[LaN0
-IS18c;>`KZ<C=G5ezfZ@9k0
+I9[^?<gLQR0nm;IDW^Gm8@1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dC:/projects/verilog/bubble-pushers
-Z3 w1461635980
-Z4 8C:/projects/verilog/bubble-pushers/execution.v
-Z5 FC:/projects/verilog/bubble-pushers/execution.v
+Z2 dC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers
+Z3 w1461874289
+Z4 8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/execution.v
+Z5 FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/execution.v
 L0 3
 Z6 OV;L;10.4b;61
 r1
 !s85 0
 31
-Z7 !s108 1461636330.000000
-Z8 !s107 C:/projects/verilog/bubble-pushers/execution.v|
-Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/execution.v|
+Z7 !s108 1461875308.000000
+Z8 !s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/execution.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/execution.v|
 !i113 1
 Z10 o-work work
 vaddfour
 R0
 !i10b 1
 !s100 @]V[ZkjT?>l9BWf?g[li30
-IZa:cc<TIo6[E:n:hSn1;e0
+IZMKP7SPfIke2PANQeX>Fo1
 R1
 R2
 R3
-Z11 8C:/projects/verilog/bubble-pushers/instruction fetch.v
-Z12 FC:/projects/verilog/bubble-pushers/instruction fetch.v
+Z11 8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/instruction fetch.v
+Z12 FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/instruction fetch.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-Z13 !s107 C:/projects/verilog/bubble-pushers/instruction fetch.v|
-Z14 !s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/instruction fetch.v|
+Z13 !s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/instruction fetch.v|
+Z14 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/instruction fetch.v|
 !i113 1
 R10
 valu
 R0
 !i10b 1
 !s100 ;jBEoNbAZT8:Z;KNDzeXT0
-IoTVlm4R`klGM^HSKajg0n0
+I8gN^fR8P3V8HSPP4]JD4N2
 R1
 R2
 R3
@@ -71,48 +71,69 @@ R10
 vcontrol
 R0
 !i10b 1
-!s100 cXLgj::G>OSQoUf]_ShB41
-IX<U3HGNbgm>15cS7BNc?X1
+!s100 IgK@I^V6[o5]3W;7K1TjW0
+I;WhYma7hCRnh<:oa?Z83z0
 R1
 R2
 R3
-8C:/projects/verilog/bubble-pushers/control.v
-FC:/projects/verilog/bubble-pushers/control.v
+8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v
+FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/projects/verilog/bubble-pushers/control.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/control.v|
+!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v|
 !i113 1
 R10
 vdata_memory
 R0
 !i10b 1
 !s100 ISMX6GnRgZ<kG[0NzcUUW3
-I?_kB1SLQ4oY8^a=I[g8gj0
+IKOb4`lX?^^e`U2n1_oI>E2
 R1
 R2
-R3
-8C:/projects/verilog/bubble-pushers/data_memory.v
-FC:/projects/verilog/bubble-pushers/data_memory.v
+w1460827776
+8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v
+FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/projects/verilog/bubble-pushers/data_memory.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/data_memory.v|
+!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v|
 !i113 1
 R10
+vInstrDecod
+R0
+!i10b 1
+!s100 E<zjKk5gX7]jez8Onb^:K1
+IzDCh<;?a]WPZc?VaadW090
+R1
+R2
+w1461875307
+8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/InstrDecod.v
+FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/InstrDecod.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/InstrDecod.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/InstrDecod.v|
+!i113 1
+R10
+n@instr@decod
 vInstrMemory
 R0
 !i10b 1
 !s100 T^mPQMM`3m0B3^9CUQO>o0
-I<g`JPSB0AR3Z325V0jhim2
+I`J<@RVV5h1bI9GS7dT2AL0
 R1
 R2
 R3
@@ -133,7 +154,7 @@ vMultiplexor
 R0
 !i10b 1
 !s100 ]Z=96ghQK5?3>^5A5a0RA0
-I0J8KS7XUnz@8cX5bj2B?P2
+I:1O6@?d4iRVQLohAJ<T?02
 R1
 R2
 R3
@@ -154,7 +175,7 @@ vMux1
 R0
 !i10b 1
 !s100 9fCgZLlTGzBzOIFUjW0aV3
-Imn?zIPc<Vk5=@lQB_RnR32
+IYMi2`WUfX_e9MelHcD=KZ1
 R1
 R2
 R3
@@ -175,7 +196,7 @@ vMux2
 R0
 !i10b 1
 !s100 nB;MhMmoTKo[j[EneocAk1
-I1N5PSm_Jlz5VI>c]eYoiS2
+IC:82o73fjYQKTc9PFkCH02
 R1
 R2
 R3
@@ -196,7 +217,7 @@ vProgramCounter
 R0
 !i10b 1
 !s100 oI24?hMc;jRYaSgfAjSe53
-IO8=812WaMD`Mg2PF`HDUe0
+IAgY=30jNSDO6_BLC5``?k2
 R1
 R2
 R3
@@ -217,7 +238,7 @@ vshiftLeftTwo
 R0
 !i10b 1
 !s100 df9g>IeDzQ_W=zEhiiMLj0
-Id6i_P?8zgV_MG4XHd<Thd2
+Io8Z]:FB;1==a6O=Xj:X4<3
 R1
 R2
 R3
@@ -238,20 +259,41 @@ vtestingIF
 R0
 !i10b 1
 !s100 AN_cZeD?G<oCTl]KUQMQX0
-IAYQ^Jo^1k1aabmo8z[^0B1
+I`T]ZZ_?`nUzZT7K^KjGSX1
 R1
 R2
 R3
-8C:/projects/verilog/bubble-pushers/test.v
-FC:/projects/verilog/bubble-pushers/test.v
+8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/test.v
+FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/test.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/projects/verilog/bubble-pushers/test.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/test.v|
+!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/test.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/test.v|
 !i113 1
 R10
 ntesting@i@f
+vtestingIFandControl
+R0
+!i10b 1
+!s100 HC_[6V`24Z?P=0_NB]Q:]3
+IXbRY_f1TggFa;lnIWR0Gh3
+R1
+R2
+R3
+8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/IFandControl.v
+FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/IFandControl.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/IFandControl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/IFandControl.v|
+!i113 1
+R10
+ntesting@i@fand@control
