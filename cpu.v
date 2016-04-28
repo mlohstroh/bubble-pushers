@@ -17,7 +17,7 @@ module cpu(clk, rst);
   control ctrl(opcode, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_dst, reg_write);
 
   if_phase fetcher(clk, rst, branch, instruction);
-  InstrDecod decode(instruction, reg_write, reg_dst, writeData, opcode, funct, regOut1, regOut2, regRt, regRd, immValue);
+  InstrDecod decode(instruction, reg_write, writeData, opcode, funct, regOut1, regOut2, regRt, regRd, immValue);
 
   data_memory mem(result, regOut2, mem_write, readData);
   Mux2 last_mux(result, readData, mem_to_reg, writeData);
