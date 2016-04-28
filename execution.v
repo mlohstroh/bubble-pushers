@@ -43,11 +43,10 @@ endmodule
 
 //----------------------------------------------------------------------
 module Mux1(a1, a0, RegDst, b);
-	parameter k=32;
-	input [k-1:0] a0, a1; // inputs
+	input [4:0] a0, a1; // inputs
 	input RegDst; //select
-	output [k-1:0] b;
-	reg [k-1:0] b;
+	output [4:0] b;
+	reg [4:0] b;
 
 
 	always @(*)
@@ -61,11 +60,10 @@ endmodule
 
 //----------------------------------------------------------------------
 module Mux2(b1, b0, ALUSrc, a);
-	parameter k=5;
-	input [k-1:0] b0, b1; // inputs
+	input [31:0] b0, b1; // inputs
 	input ALUSrc; //select
-	output [k-1:0] a;
-	reg [k-1:0] a;
+	output [31:0] a;
+	reg [31:0] a;
 
 	always @(*)
 		begin

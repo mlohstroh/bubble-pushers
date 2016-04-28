@@ -1,7 +1,7 @@
 module data_memory(address, write_data, control_write, read_data);
   // Parameters
   // w is the size of each cell
-  parameter w = 3;
+  parameter w = 31;
   // cells is the count for each cell
   parameter cells = 255;
 

@@ -17,7 +17,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
         branch = 1;
         reg_write = 0;
         mem_write = 0;
-	end
+    	end
       // R type op-code
       6'b000000:
         case(funct)
@@ -32,7 +32,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
             branch = 0;
             mem_write = 0;
             alu_ctrl = 2'b01;
-	end
+      	end
           // sub funct
           6'b100100: begin
             reg_write = 1;
@@ -41,7 +41,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
             branch = 0;
             mem_write = 0;
             alu_ctrl = 2'b10;
-	end
+        	end
         endcase
       // I type OP codes
 
@@ -53,7 +53,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
         branch = 0;
         mem_write = 0;
         mem_to_reg = 0;
-	end
+    	end
       // lw
       6'b100011: begin
         reg_write = 1;
@@ -63,7 +63,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
         mem_write = 0;
         mem_to_reg = 1;
         alu_ctrl = 2'b01;
-	end
+    	end
       // sw
       6'b101011: begin
         reg_write = 0;
@@ -71,7 +71,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
         branch = 0;
         mem_write = 1;
         alu_ctrl = 2'b01;
-	end
+    	end
       // beq 
       6'b000100: begin
         reg_write = 0;
@@ -79,7 +79,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
         branch = 1;
         mem_write = 0;
         alu_ctrl = 2'b00;
-	end
+    	end
     endcase
   end
 endmodule

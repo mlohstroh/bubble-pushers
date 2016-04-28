@@ -1,4 +1,4 @@
-module testingIF (clk, rst, ctrl, instr);
+module if_phase (clk, rst, ctrl, instr);
 	input  rst, clk, ctrl ; //declaring inputs, outputs, and wires (to handle information exchange between modules)
 	output [31:0] instr ;
 	reg [31:0] instr;
@@ -9,7 +9,6 @@ module testingIF (clk, rst, ctrl, instr);
 	reg [31:0] branch;
 	
 	initial branch = 32'b00000000000000000000000000000000; //stand in for branch
-
 
 	addfour PCadd(currentpc, muxin); //all components, wired together
 	Multiplexor mux(muxin, branch, ctrl, newpc);
