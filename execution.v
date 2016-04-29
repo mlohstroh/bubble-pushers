@@ -42,7 +42,7 @@ always@(*)
 endmodule
 
 //----------------------------------------------------------------------
-module Mux1(a1, a0, RegDst, b);
+module Mux1(a0, a1, RegDst, b);
 	input [4:0] a0, a1; // inputs
 	input RegDst; //select
 	output [4:0] b;
@@ -59,7 +59,7 @@ module Mux1(a1, a0, RegDst, b);
 endmodule
 
 //----------------------------------------------------------------------
-module Mux2(b1, b0, ALUSrc, a);
+module Mux2(b0, b1, ALUSrc, a);
 	input [31:0] b0, b1; // inputs
 	input ALUSrc; //select
 	output [31:0] a;

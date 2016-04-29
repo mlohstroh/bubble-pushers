@@ -3,10 +3,10 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
   input [5:0] op;
 
   output [0:0] mem_to_reg, mem_write, branch, alu_src, reg_dst, reg_write, jump;
-  output [2:0] alu_ctrl;
+  output [1:0] alu_ctrl;
 
   reg [0:0] mem_to_reg, mem_write, branch, alu_src, reg_dst, reg_write, jump;
-  reg [2:0] alu_ctrl;
+  reg [1:0] alu_ctrl;
 
   always @(*) begin
     case(op)
@@ -30,6 +30,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
             branch = 0;
             mem_write = 0;
             alu_ctrl = 2'b01;
+            jump = 0;
       	end
           // sub funct
           6'b100100: begin
@@ -39,6 +40,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
             branch = 0;
             mem_write = 0;
             alu_ctrl = 2'b10;
+            jump = 0;
         	end
         endcase
       // I type OP codes
@@ -48,9 +50,11 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
         reg_write = 1;
         reg_dst = 0;
         alu_src = 1;
+        alu_ctrl = 2'b10;
         branch = 0;
         mem_write = 0;
         mem_to_reg = 0;
+        jump = 0;
     	end
       // lw
       6'b100011: begin
@@ -61,6 +65,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
         mem_write = 0;
         mem_to_reg = 1;
         alu_ctrl = 2'b01;
+        jump = 0;
     	end
       // sw
       6'b101011: begin
@@ -69,6 +74,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
         branch = 0;
         mem_write = 1;
         alu_ctrl = 2'b01;
+        jump = 0;
     	end
       // beq 
       6'b000100: begin
@@ -77,6 +83,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
         branch = 1;
         mem_write = 0;
         alu_ctrl = 2'b00;
+        jump = 0;
     	end
     endcase
   end

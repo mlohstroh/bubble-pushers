@@ -20,6 +20,15 @@ module InstrDecod(instr, pc, regWrite, writeData, opcode, funct, regOut1, regOut
   wire [31:0] regOut1, regOut2;
   wire [31:0] immValue, branchAddr, jumpDest;
  
+  integer k;
+  initial
+    begin
+    for (k = 0; k < 31 - 1; k = k + 1)
+      begin
+        registerMem[k] = 0;
+      end
+  end
+
   always @(writeData) begin
     if (regWrite == 1)
       registerMem[regRd] = writeData;
@@ -38,8 +47,7 @@ module InstrDecod(instr, pc, regWrite, writeData, opcode, funct, regOut1, regOut
 
 
     // immediate values
-    assign immValue = instr[15:0]; 
-    assign immValue = instr[15];
+    assign immValue = { {16{instr[15]}}, instr[15:0] };
 
     // jump 
     assign jumpDest[31:28] = pc[31:28];
@@ -49,7 +57,7 @@ module InstrDecod(instr, pc, regWrite, writeData, opcode, funct, regOut1, regOut
     assign branchDest = immValue;
     assign branchDest[31:28] = pc[31:28];
 
-    assign regOut1 = registerMem[regRs]; 
+    assign regOut1 = registerMem[regRs];
     assign regOut2 = registerMem[regRt];
   //end
   
