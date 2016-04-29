@@ -3,7 +3,7 @@ module cpu(clk, rst);
 
   wire [31:0] instruction;
   wire mem_to_reg, mem_write, branch_ctrl, alu_src, reg_dst, reg_write, jumpCtr;
-  wire [2:0] alu_ctrl;
+  wire [1:0] alu_ctrl;
   wire [31:0] writeData;
   wire [5:0] opcode, funct;
   wire [31:0] regOut1, regOut2;
@@ -13,13 +13,17 @@ module cpu(clk, rst);
   wire [31:0] readData;
   wire [31:0] currentPC;
   wire [31:0] jumpDest;
+  wire [31:0] branchDest;
+  wire [4:0] writeRegister;
 
   allAlu alu(regOut1, regOut2, immValue, reg_dst, regRt, regRd, alu_src, alu_ctrl, writeRegister, result);
 
-  control ctrl(opcode, funct, mem_to_reg, mem_write, branch_ctrl, alu_ctrl, alu_src, reg_dst, reg_write, jumpCtrl);
+  //               (instr, pc, regWrite, writeData, opcode, funct, regOut1, regOut2, regRt, regRd, immValue, jumpDest, branchDest);
+  InstrDecod decode(instruction, currentPC, reg_write, writeData, writeRegister, opcode, funct, regOut1, regOut2, regRt, regRd, immValue, jumpDest, branchDest);
 
-  if_phase fetcher(clk, rst, branchAddress, branch_ctrl, jumpAddress, jumpCtrl, instruction, currentPC);
-  InstrDecod decode(instruction, currentPC, reg_write, writeData, opcode, funct, regOut1, regOut2, regRt, regRd, immValue, jumpDest);
+  if_phase fetcher(clk, rst, branchDest, branch_ctrl, jumpDest, jumpCtrl, instruction, currentPC);
+
+  control ctrl(opcode, funct, mem_to_reg, mem_write, branch_ctrl, alu_ctrl, alu_src, reg_dst, reg_write, jumpCtrl);
 
   data_memory mem(result, regOut2, mem_write, readData);
   Mux2 last_mux(result, readData, mem_to_reg, writeData);
@@ -29,7 +33,7 @@ endmodule
 module allAlu(regOut1, regOut2, immValue, regDst, regRt, regRd, alu_src, alu_ctrl, writeRegister, result);
   input [31:0] regOut1, regOut2, immValue;
   input alu_src;
-  input [2:0] alu_ctrl;
+  input [1:0] alu_ctrl;
   input [4:0] regRt, regRd;
   input regDst; 
 
@@ -38,7 +42,7 @@ module allAlu(regOut1, regOut2, immValue, regDst, regRt, regRd, alu_src, alu_ctr
 
   wire [31:0] regOut1, regOut2, immValue;
   wire alu_src;
-  wire [2:0] alu_ctrl;
+  wire [1:0] alu_ctrl;
   wire [31:0] result;
   wire outBranch;
   wire [31:0] actualSource;

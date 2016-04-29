@@ -1,7 +1,8 @@
-module InstrDecod(instr, pc, regWrite, writeData, opcode, funct, regOut1, regOut2, regRt, regRd, immValue, jumpDest, branchDest);
+module InstrDecod(instr, pc, regWrite, writeData, writeRegister, opcode, funct, regOut1, regOut2, regRt, regRd, immValue, jumpDest, branchDest);
   input [31:0] instr;    //from Instruction Fetch
   input [31:0] pc; //from Instruction Fetch
   input [31:0] writeData;
+  input [4:0] writeRegister;
   input regWrite;   //from Control
 
   output [5:0] opcode; //sent to Control
@@ -16,9 +17,10 @@ module InstrDecod(instr, pc, regWrite, writeData, opcode, funct, regOut1, regOut
 
   reg [31:0] registerMem [0:31];
 
-  wire [4:0] regRs, regRt, regRd;
-  wire [31:0] regOut1, regOut2;
-  wire [31:0] immValue, branchAddr, jumpDest;
+  reg [5:0] opcode, funct;
+  reg [4:0] regRs, regRt, regRd;
+  reg [31:0] regOut1, regOut2;
+  reg [31:0] immValue, branchAddr, jumpDest, branchDest;
  
   integer k;
   initial
@@ -31,34 +33,32 @@ module InstrDecod(instr, pc, regWrite, writeData, opcode, funct, regOut1, regOut
 
   always @(writeData) begin
     if (regWrite == 1)
-      registerMem[regRd] = writeData;
-    else
-      registerMem[regRt] = writeData;
+      registerMem[writeRegister] = writeData;
   end
 
-  //always @(instr) begin
-    assign opcode = instr[31:26];
-    assign funct = instr[5:0];
+  always @(instr) begin
+    opcode = instr[31:26];
+     funct = instr[5:0];
 
     // registers
-    assign regRs = instr[25:21];
-    assign regRt = instr[20:16];
-    assign regRd = instr[15:11];
+    regRs = instr[25:21];
+    regRt = instr[20:16];
+    regRd = instr[15:11];
 
 
     // immediate values
-    assign immValue = { {16{instr[15]}}, instr[15:0] };
+    immValue = { {16{instr[15]}}, instr[15:0] };
 
     // jump 
-    assign jumpDest[31:28] = pc[31:28];
-    assign jumpDest[27:2] = instr[25:0];
-    assign jumpDest [1:0] = 0;
+    jumpDest[31:28] = pc[31:28];
+    jumpDest[27:2] = instr[25:0];
+    jumpDest [1:0] = 0;
 
-    assign branchDest = immValue;
-    assign branchDest[31:28] = pc[31:28];
+    branchDest = immValue;
+    branchDest[31:28] = pc[31:28];
 
-    assign regOut1 = registerMem[regRs];
-    assign regOut2 = registerMem[regRt];
-  //end
+    regOut1 = registerMem[regRs];
+    regOut2 = registerMem[regRt];
+  end
   
 endmodule
