@@ -1,6 +1,6 @@
-module InstrDecod(instr, regWrite, writeData, opcode, funct, regOut1, regOut2, regRt, regRd, immValue);
+module InstrDecod(instr, pc, regWrite, writeData, opcode, funct, regOut1, regOut2, regRt, regRd, immValue, jumpDest, branchDest);
   input [31:0] instr;    //from Instruction Fetch
-  // input [31:0] PC_4; //from Instruction Fetch
+  input [31:0] pc; //from Instruction Fetch
   input [31:0] writeData;
   input regWrite;   //from Control
 
@@ -10,13 +10,13 @@ module InstrDecod(instr, regWrite, writeData, opcode, funct, regOut1, regOut2, r
   output [31:0] regOut2; //sent to Exe(Read data 2)
   output [4:0] regRt;  //sent to Exe Mux(RegDst = 0)
   output [4:0] regRd;  //sent to Exe Mux(RegDst = 1)
-  //output [31:0] jumpDest;  //sent for Jump address
+  output [31:0] jumpDest;  //sent for Jump address
   output [31:0] immValue;
+  output [31:0] branchDest;
 
   reg [31:0] registerMem [0:31];
 
   wire [4:0] regRs, regRt, regRd;
-  wire [31:0] pc4;
   wire [31:0] regOut1, regOut2;
   wire [31:0] immValue, branchAddr, jumpDest;
  
@@ -42,9 +42,12 @@ module InstrDecod(instr, regWrite, writeData, opcode, funct, regOut1, regOut2, r
     assign immValue = instr[15];
 
     // jump 
-    // assign jumpDest[31:28] = PC_4[31:28];
-    // assign jumpDest[27:2] = instr[25:0];
-    // assign jumpDest [1:0] = 0;
+    assign jumpDest[31:28] = pc[31:28];
+    assign jumpDest[27:2] = instr[25:0];
+    assign jumpDest [1:0] = 0;
+
+    assign branchDest = immValue;
+    assign branchDest[31:28] = pc[31:28];
 
     assign regOut1 = registerMem[regRs]; 
     assign regOut2 = registerMem[regRt];

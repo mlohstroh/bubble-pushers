@@ -1,20 +1,26 @@
-module if_phase (clk, rst, ctrl, instr);
-	input  rst, clk, ctrl ; //declaring inputs, outputs, and wires (to handle information exchange between modules)
-	output [31:0] instr ;
+module if_phase (clk, rst, branch_address, branch_ctrl, jump_address, jump_ctrl, instr, pc);
+	input  rst, clk, branch_ctrl, jump_ctrl; //declaring inputs, outputs, and wires (to handle information exchange between modules)
+	input [31:0] branch_address, jump_address;
+	output [31:0] instr, pc;
 	reg [31:0] instr;
 	wire [31:0] newpc;
-	wire [31:0] currentpc;
 	wire [31:0] instrout;
 	wire [31:0] muxin;
+	wire [31:0] branchOrNext;
+	wire [31:0] nextPCAddress;
+	wire branch_ctrl, jump_ctrl;
 	reg [31:0] branch;
-	
-	initial branch = 32'b00000000000000000000000000000000; //stand in for branch
+	wire [31:0] pc;
 
-	addfour PCadd(currentpc, muxin); //all components, wired together
-	Multiplexor mux(muxin, branch, ctrl, newpc);
-	ProgramCounter PC(clk, newpc, currentpc, rst);
-	InstrMemory IMEM(currentpc, instrout);
-	
+	addfour PCadd(pc, muxin); //all components, wired together
+
+	// muxes - one for the branch
+	Multiplexor mux_branch(muxin, branch_address, branch_ctrl, branchOrNext);
+	// and the other for the specific jump
+	Multiplexor mux_jump(branchOrNext, jump_address, jump_ctrl, nextPCAddress);
+
+	ProgramCounter PC(clk, nextPCAddress, pc, rst);
+	InstrMemory IMEM(pc, instrout);
 	
 	always @(*) //output assignment
 		instr = instrout;

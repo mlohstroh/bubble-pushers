@@ -2,7 +2,7 @@ module cpu(clk, rst);
   input clk, rst;
 
   wire [31:0] instruction;
-  wire mem_to_reg, mem_write, branch, alu_src, reg_dst, reg_write;
+  wire mem_to_reg, mem_write, branch_ctrl, alu_src, reg_dst, reg_write, jumpCtr;
   wire [2:0] alu_ctrl;
   wire [31:0] writeData;
   wire [5:0] opcode, funct;
@@ -11,13 +11,15 @@ module cpu(clk, rst);
   wire [31:0] immValue;
   wire [31:0] result;
   wire [31:0] readData;
+  wire [31:0] currentPC;
+  wire [31:0] jumpDest;
 
   allAlu alu(regOut1, regOut2, immValue, reg_dst, regRt, regRd, alu_src, alu_ctrl, writeRegister, result);
 
-  control ctrl(opcode, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_dst, reg_write);
+  control ctrl(opcode, funct, mem_to_reg, mem_write, branch_ctrl, alu_ctrl, alu_src, reg_dst, reg_write, jumpCtrl);
 
-  if_phase fetcher(clk, rst, branch, instruction);
-  InstrDecod decode(instruction, reg_write, writeData, opcode, funct, regOut1, regOut2, regRt, regRd, immValue);
+  if_phase fetcher(clk, rst, branchAddress, branch_ctrl, jumpAddress, jumpCtrl, instruction, currentPC);
+  InstrDecod decode(instruction, currentPC, reg_write, writeData, opcode, funct, regOut1, regOut2, regRt, regRd, immValue, jumpDest);
 
   data_memory mem(result, regOut2, mem_write, readData);
   Mux2 last_mux(result, readData, mem_to_reg, writeData);

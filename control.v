@@ -1,14 +1,12 @@
-module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_dst, reg_write) ;
+module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_dst, reg_write, jump) ;
   input [5:0] funct;
   input [5:0] op;
 
-  output [0:0] mem_to_reg, mem_write, branch, alu_src, reg_dst, reg_write;
+  output [0:0] mem_to_reg, mem_write, branch, alu_src, reg_dst, reg_write, jump;
   output [2:0] alu_ctrl;
 
-  reg [0:0] mem_to_reg, mem_write, branch, alu_src, reg_dst, reg_write;
+  reg [0:0] mem_to_reg, mem_write, branch, alu_src, reg_dst, reg_write, jump;
   reg [2:0] alu_ctrl;
-
-
 
   always @(*) begin
     case(op)

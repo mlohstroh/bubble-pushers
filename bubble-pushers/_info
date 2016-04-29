@@ -9,63 +9,63 @@ z2
 cModel Technology
 dC:/altera/15.1
 vadder
-Z0 !s110 1461880970
+Z0 !s110 1461892766
 !i10b 1
 !s100 EHn<7?DYk6i9lX;zU[LaN0
-I9[^?<gLQR0nm;IDW^Gm8@1
+IS18c;>`KZ<C=G5ezfZ@9k0
 Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers
-Z3 w1461880419
-Z4 8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/execution.v
-Z5 FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/execution.v
+Z2 dC:/projects/verilog/bubble-pushers
+Z3 w1461883617
+Z4 8C:/projects/verilog/bubble-pushers/execution.v
+Z5 FC:/projects/verilog/bubble-pushers/execution.v
 L0 3
 Z6 OV;L;10.4b;61
 r1
 !s85 0
 31
-Z7 !s108 1461880970.000000
-Z8 !s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/execution.v|
-Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/execution.v|
+Z7 !s108 1461892766.000000
+Z8 !s107 C:/projects/verilog/bubble-pushers/execution.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/execution.v|
 !i113 1
 Z10 o-work work
 vaddfour
 R0
 !i10b 1
 !s100 @]V[ZkjT?>l9BWf?g[li30
-IZMKP7SPfIke2PANQeX>Fo1
+IZa:cc<TIo6[E:n:hSn1;e0
 R1
 R2
-Z11 w1461874289
-Z12 8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/instruction fetch.v
-Z13 FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/instruction fetch.v
+Z11 w1461635980
+Z12 8C:/projects/verilog/bubble-pushers/instruction fetch.v
+Z13 FC:/projects/verilog/bubble-pushers/instruction fetch.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-Z14 !s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/instruction fetch.v|
-Z15 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/instruction fetch.v|
+Z14 !s107 C:/projects/verilog/bubble-pushers/instruction fetch.v|
+Z15 !s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/instruction fetch.v|
 !i113 1
 R10
 vallAlu
 R0
 !i10b 1
-!s100 2>X<7oCU=`M:A13jb1ECS2
-IQ_?Hh5U8[7oAZ>9oAN>KN2
+!s100 ?@2j;cKLD7k3YNU>SFY]E3
+IJG_VlNYl?`0]^mfQ6@[jg3
 R1
 R2
-Z16 w1461880644
-Z17 8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/cpu.v
-Z18 FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/cpu.v
-L0 27
+Z16 w1461892136
+Z17 8C:/projects/verilog/bubble-pushers/cpu.v
+Z18 FC:/projects/verilog/bubble-pushers/cpu.v
+L0 29
 R6
 r1
 !s85 0
 31
 R7
-Z19 !s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/cpu.v|
-Z20 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/cpu.v|
+Z19 !s107 C:/projects/verilog/bubble-pushers/cpu.v|
+Z20 !s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/cpu.v|
 !i113 1
 R10
 nall@alu
@@ -73,7 +73,7 @@ valu
 R0
 !i10b 1
 !s100 ;jBEoNbAZT8:Z;KNDzeXT0
-I8gN^fR8P3V8HSPP4]JD4N2
+IoTVlm4R`klGM^HSKajg0n0
 R1
 R2
 R3
@@ -92,28 +92,28 @@ R10
 vcontrol
 R0
 !i10b 1
-!s100 IgK@I^V6[o5]3W;7K1TjW0
-I;WhYma7hCRnh<:oa?Z83z0
+!s100 >kE@O9ZMVLga`KZDo:<8@2
+IZ4a<R3]VLcjl;zGE[1LD81
 R1
 R2
-R3
-8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v
-FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v
+w1461890899
+8C:/projects/verilog/bubble-pushers/control.v
+FC:/projects/verilog/bubble-pushers/control.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/control.v|
+!s107 C:/projects/verilog/bubble-pushers/control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/control.v|
 !i113 1
 R10
 vcpu
 R0
 !i10b 1
-!s100 iEN>N[<5VjHU9E:X^IUR_3
-IT`SKzVO?:IQJ^F7^?ZX3^0
+!s100 ZH1jFK7PL8:oSCiMTAoAD0
+IV_SV8Ul@`:flC`UcfaJRO3
 R1
 R2
 R16
@@ -133,60 +133,60 @@ vdata_memory
 R0
 !i10b 1
 !s100 IEZPlS<CjbZ2oYT:Fo9XO0
-I79Iz^hoYMTC4O`agWYd@g1
+I]GL5SOUch7DGXzL5ShQL:1
 R1
 R2
 R3
-8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v
-FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v
+8C:/projects/verilog/bubble-pushers/data_memory.v
+FC:/projects/verilog/bubble-pushers/data_memory.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/data_memory.v|
+!s107 C:/projects/verilog/bubble-pushers/data_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/data_memory.v|
 !i113 1
 R10
 vif_phase
 R0
 !i10b 1
-!s100 `MH0ThE4H_^7_c74_ilKg2
-IHa:MO:e:>X3L7LG>VnMd?1
+!s100 Y6P2LE0TkOdW48YcXIb0h2
+ITW]h?KTXOH`JJ<;[4oPA83
 R1
 R2
-R3
-8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/if_phase.v
-FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/if_phase.v
+w1461890865
+8C:/projects/verilog/bubble-pushers/if_phase.v
+FC:/projects/verilog/bubble-pushers/if_phase.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/if_phase.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/if_phase.v|
+!s107 C:/projects/verilog/bubble-pushers/if_phase.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/if_phase.v|
 !i113 1
 R10
 vInstrDecod
 R0
 !i10b 1
-!s100 [kIPTaZHYaObHX5_^:LA82
-IUCo5<>haR[D318La_R_Ge2
+!s100 Mik1VVZRz5ebPJK`@=:3S1
+I:m6T7m^M@fI92_BlCFcI;1
 R1
 R2
-w1461880968
-8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/InstrDecod.v
-FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/InstrDecod.v
+w1461892744
+8C:/projects/verilog/bubble-pushers/InstrDecod.v
+FC:/projects/verilog/bubble-pushers/InstrDecod.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/InstrDecod.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/InstrDecod.v|
+!s107 C:/projects/verilog/bubble-pushers/InstrDecod.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/InstrDecod.v|
 !i113 1
 R10
 n@instr@decod
@@ -194,7 +194,7 @@ vInstrMemory
 R0
 !i10b 1
 !s100 T^mPQMM`3m0B3^9CUQO>o0
-I`J<@RVV5h1bI9GS7dT2AL0
+I<g`JPSB0AR3Z325V0jhim2
 R1
 R2
 R11
@@ -215,7 +215,7 @@ vMultiplexor
 R0
 !i10b 1
 !s100 ]Z=96ghQK5?3>^5A5a0RA0
-I:1O6@?d4iRVQLohAJ<T?02
+I0J8KS7XUnz@8cX5bj2B?P2
 R1
 R2
 R11
@@ -236,7 +236,7 @@ vMux1
 R0
 !i10b 1
 !s100 eCW2fHkT>LgEz[g<<=Rm=2
-I=79LghVUiILBfLW^5OFKi1
+ImN3aYcL3319IUT@bG@zzQ1
 R1
 R2
 R3
@@ -257,7 +257,7 @@ vMux2
 R0
 !i10b 1
 !s100 zJUMM7TZK7<2PY5mWL_zo2
-I<9_2k_E]3>;deF6b?mXW60
+I>aY_Rdc0R[FE9WYa7`=k42
 R1
 R2
 R3
@@ -278,7 +278,7 @@ vProgramCounter
 R0
 !i10b 1
 !s100 oI24?hMc;jRYaSgfAjSe53
-IAgY=30jNSDO6_BLC5``?k2
+IO8=812WaMD`Mg2PF`HDUe0
 R1
 R2
 R11
@@ -299,7 +299,7 @@ vshiftLeftTwo
 R0
 !i10b 1
 !s100 87632oFVQf6cEL4?D^`_@0
-IQL@eoEYRUKLaIU;afFgUT2
+IJl[6W59ee@TNIHG5K[O:20
 R1
 R2
 R3
@@ -322,8 +322,8 @@ vtestingIF
 !s100 AN_cZeD?G<oCTl]KUQMQX0
 I`T]ZZ_?`nUzZT7K^KjGSX1
 R1
-R2
-R11
+dC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers
+w1461874289
 8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/test.v
 FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/test.v
 L0 1
@@ -341,20 +341,20 @@ vtestingIFandControl
 R0
 !i10b 1
 !s100 HC_[6V`24Z?P=0_NB]Q:]3
-IXbRY_f1TggFa;lnIWR0Gh3
+IhjW`bk>ASc`m=^T39_jPf1
 R1
 R2
-R11
-8C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/IFandControl.v
-FC:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/IFandControl.v
+R3
+8C:/projects/verilog/bubble-pushers/IFandControl.v
+FC:/projects/verilog/bubble-pushers/IFandControl.v
 L0 2
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/IFandControl.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mlohstroh-vm/Documents/projects/bubble-pushers/IFandControl.v|
+!s107 C:/projects/verilog/bubble-pushers/IFandControl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/projects/verilog/bubble-pushers/IFandControl.v|
 !i113 1
 R10
 ntesting@i@fand@control
