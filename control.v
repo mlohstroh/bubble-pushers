@@ -50,7 +50,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
         reg_write = 1;
         reg_dst = 0;
         alu_src = 1;
-        alu_ctrl = 2'b10;
+        alu_ctrl = 2'b01;
         branch = 0;
         mem_write = 0;
         mem_to_reg = 0;

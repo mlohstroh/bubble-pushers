@@ -14,7 +14,8 @@ input [31:0] a,b;
 input [1:0] ALUctrl;
 output out_branch;
 output [31:0] out_address; 
-reg [31:0] out_address;
+wire signed [31:0] a,b;
+reg signed [31:0] out_address;
 reg out_branch; 
 
 always@(*)

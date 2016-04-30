@@ -38,7 +38,7 @@ module InstrMemory(addr, out);
 	reg [31:0] out;
 	reg[31:0] mem [0:1000]; //hard coded to 1000 elements, just for simplicity's sake
 
-	initial $readmemb("binDump.bin",mem); //reading in memory
+	initial $readmemb("prog2.bin",mem); //reading in memory
 
 	always @(*) //output the memory at the desired address
 		out = mem[addr];
