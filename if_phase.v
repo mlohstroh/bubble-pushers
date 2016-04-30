@@ -3,14 +3,14 @@ module if_phase (clk, rst, branch_address, branch_ctrl, jump_address, jump_ctrl,
 	input [31:0] branch_address, jump_address;
 	output [31:0] instr, pc;
 	reg [31:0] instr;
-	wire [31:0] newpc;
+	wire signed [31:0] newpc;
 	wire [31:0] instrout;
 	wire [31:0] muxin;
 	wire [31:0] branchOrNext;
 	wire [31:0] nextPCAddress;
 	wire branch_ctrl, jump_ctrl;
 	reg [31:0] branch;
-	wire [31:0] pc;
+	wire signed [31:0] pc;
 
 	addfour PCadd(pc, muxin); //all components, wired together
 

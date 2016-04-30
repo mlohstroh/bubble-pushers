@@ -16,7 +16,7 @@ module ProgramCounter(clk, in, out, rst); //keeps track of the current address i
 	input rst; //reset value
 	input [31:0] in; //in as input
 	output [31:0] out; //out as output
-	reg [31:0] out;//out register
+	reg signed [31:0] out;//out register
 
 	always @(posedge clk)//run when at clock positive edge
 		out = rst ? 32'b00000000000000000000000000000000 : in ; // reset state	
@@ -38,7 +38,7 @@ module InstrMemory(addr, out);
 	reg [31:0] out;
 	reg[31:0] mem [0:1000]; //hard coded to 1000 elements, just for simplicity's sake
 
-	initial $readmemb("instructions",mem); //reading in memory
+	initial $readmemb("binDump.bin",mem); //reading in memory
 
 	always @(*) //output the memory at the desired address
 		out = mem[addr];
