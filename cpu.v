@@ -1,6 +1,8 @@
+// The CPU module that contains all the data
 module cpu(clk, rst);
   input clk, rst;
 
+  // Wires here are the connections between modules 
   wire [31:0] instruction;
   wire mem_to_reg, mem_write, branch_ctrl, alu_src, reg_dst, reg_write, jumpCtr;
   wire [1:0] alu_ctrl;
@@ -20,7 +22,6 @@ module cpu(clk, rst);
 
   allAlu alu(regOut1, regOut2, immValue, reg_dst, regRt, regRd, alu_src, alu_ctrl, writeRegister, result, canBranch);
 
-  //               (instr, pc, regWrite, writeData, opcode, funct, regOut1, regOut2, regRt, regRd, immValue, jumpDest, branchDest);
   InstrDecod decode(instruction, currentPC, reg_write, writeData, writeRegister, opcode, funct, regOut1, regOut2, regRt, regRd, immValue, jumpDest, branchDest);
 
   if_phase fetcher(clk, rst, branchDest, canReallyBranch, jumpDest, jumpCtrl, instruction, currentPC);
@@ -28,11 +29,13 @@ module cpu(clk, rst);
   control ctrl(opcode, funct, mem_to_reg, mem_write, branch_ctrl, alu_ctrl, alu_src, reg_dst, reg_write, jumpCtrl);
 
   data_memory mem(result, regOut2, mem_write, readData);
-  Mux2 last_mux(result, readData, mem_to_reg, writeData);
+  mux #(32) last_mux(result, readData, mem_to_reg, writeData);
 
   bestAnd branchAnd(branch_ctrl, canBranch, canReallyBranch);
 endmodule
 
+
+// Module that wires all the ALU components together
 module allAlu(regOut1, regOut2, immValue, regDst, regRt, regRd, alu_src, alu_ctrl, writeRegister, result, canBranch);
   input [31:0] regOut1, regOut2, immValue;
   input alu_src;
@@ -52,10 +55,11 @@ module allAlu(regOut1, regOut2, immValue, regDst, regRt, regRd, alu_src, alu_ctr
   wire [31:0] actualSource;
 
   alu alu(result, canBranch, regOut1, actualSource, alu_ctrl);
-  Mux1 mux(regRt, regRd, regDst, writeRegister);
-  Mux2 other_mux(regOut2, immValue, alu_src, actualSource);
+  mux #(5) mux(regRt, regRd, regDst, writeRegister);
+  mux #(32) other_mux(regOut2, immValue, alu_src, actualSource);
 endmodule
 
+// An and module for to determine if we can branch or not
 module bestAnd(inOne, inTwo, outResult);
   input inOne;
   input inTwo;

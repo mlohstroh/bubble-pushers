@@ -1,4 +1,4 @@
-module addfour (pcprev, newpc); //increments value from PC counter by 4
+module incrementCounter (pcprev, newpc); //increments value from PC counter to next instruction
 	input [31:0] pcprev; //setting up inputs and outputs
 	reg [31:0] newpcreg;
 	output [31:0] newpc;
@@ -20,16 +20,6 @@ module ProgramCounter(clk, in, out, rst); //keeps track of the current address i
 
 	always @(posedge clk)//run when at clock positive edge
 		out = rst ? 32'b00000000000000000000000000000000 : in ; // reset state	
-endmodule
-
-module Multiplexor(in0, in1, select, out);
-	input [31:0] in0, in1; //assigning inputs and outputs
-	input select;
-	output [31:0] out;
-	reg [31:0] out;
-
-	always@(*) //always output the choice from select
-		out = select ? in1 : in0 ;
 endmodule
 
 module InstrMemory(addr, out);
