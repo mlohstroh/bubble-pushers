@@ -52,10 +52,9 @@ module InstrDecod(instr, pc, regWrite, writeData, writeRegister, opcode, funct, 
     immValue = { {16{instr[15]}}, instr[15:0] };
 
     // jump 
-    jumpDest[31:28] = pc[31:28];
-    jumpDest[27:2] = instr[25:0];
-    jumpDest [1:0] = 0;
-
+    // jumpDest[31:28]
+    // jumpDest[27:2] = instr[25:0];
+    jumpDest = { {5{instr[25]}}, instr[25:0] };
 
     signedBranch = { {16{instr[15]}}, instr[15:0] };
     branchDest = pc + signedBranch;

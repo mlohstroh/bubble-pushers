@@ -17,6 +17,17 @@ module data_memory(address, write_data, control_write, read_data);
   reg [w:0] storage [0:cells];
   reg [w:0] read_data;
 
+  integer i;
+
+  initial
+    begin
+    for (i = 0; i < cells + 1; i = i + 1)
+      begin
+        storage[i] = 0;
+      end
+  end
+
+
   always @(*) begin
 
     // If we are supposed to write this cycle

@@ -12,7 +12,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
     case(op)
       // jump opcode
       6'b000010: begin
-        branch = 1;
+        jump = 1;
         reg_write = 0;
         mem_write = 0;
     	end
@@ -33,7 +33,7 @@ module control(op, funct, mem_to_reg, mem_write, branch, alu_ctrl, alu_src, reg_
             jump = 0;
       	end
           // sub funct
-          6'b100100: begin
+          6'b100010: begin
             reg_write = 1;
             reg_dst = 1;
             alu_src = 0;
